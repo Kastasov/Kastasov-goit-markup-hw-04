@@ -14,6 +14,7 @@
   --header-border: #ececec;
   --social-madia-logo-color: #afb1b8;
   --heroe-background: #c4c4c4;
+  --heroe-overlay: rgba(47, 48, 58, 0.4);
 }
 
 html {
@@ -115,12 +116,34 @@ img {
 .header-menu .item + .item {
   margin-left: 50px;
 }
+
 .header-kontakt-box {
   margin-left: auto;
 }
 
 .header-kontakt {
   display: flex;
+}
+.header-kontakt > .item {
+  display: flex;
+
+  align-items: center;
+}
+
+.header-kontakt > .item:nth-child(1)::before {
+  content: '';
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/logo/envelope.svg);
+  margin-right: 10px;
+}
+
+.header-kontakt > .item:nth-child(2)::before {
+  content: '';
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/logo/smartphone.svg);
+  margin-right: 10px;
 }
 
 .header-kontakt .item + .item {
@@ -170,9 +193,9 @@ img {
   padding-bottom: 32px;
 }
 
-.header-contact:hover,
-.header-contact:focus,
-.header-contact:active {
+.header-contact-link:hover,
+.header-contact-link:focus,
+.header-contact-link:active {
   color: var(--accent-color);
 }
 
@@ -193,12 +216,20 @@ img {
 .heroe {
   padding: 200px 0;
   background-color: var(--heroe-background);
-  background-image: url(../images/main-page/hero-background.jpg);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.heroe-overlay {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, var(--heroe-overlay), var(--heroe-overlay)),
+    url(../images/main-page/hero-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .heroe-header {
@@ -247,7 +278,33 @@ img {
   margin-left: 30px;
 }
 
+.advantages-flex > .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  background-color: var(--body-accent-background);
+}
+
+.advantages-flex > .item:nth-child(1)::before {
+  background-image: url(../images/logo/about-antenna-1.svg);
+}
+
+.advantages-flex > .item:nth-child(2)::before {
+  background-image: url(../images/logo/about-clock2.svg);
+}
+
+.advantages-flex > .item:nth-child(3)::before {
+  background-image: url(../images/logo/about-diagram-3.svg);
+}
+.advantages-flex > .item:nth-child(4)::before {
+  background-image: url(../images/logo/about-astronau-4.svg);
+}
+
 .advantages-list-header {
+  margin-top: 30px;
   font-size: 14px;
   line-height: 1.15;
   margin-bottom: 10px;
@@ -295,13 +352,13 @@ img {
   font-size: 16px;
   line-height: 1.2;
   margin-top: 10px;
-  padding-bottom: 30px;
 }
 
 .team-member {
   background-color: var(--background-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
 }
 /* .team-member > div { */
 /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), */
@@ -313,6 +370,36 @@ img {
   justify-content: space-between;
 }
 
+.team-member-socials {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 16px;
+  
+}
+
+.social-box {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  al
+}
+
+.social-box a {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.team-member-socials .social-box + .social-box {
+  margin-left: 10px;
+}
+
+.social-box svg {
+  width: 50%;
+  height: 50%;
+  fill: currentColor;
+}
+
 .clients {
   background-color: var(--background-white);
 }
@@ -320,7 +407,6 @@ img {
 .clients-flex {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
 }
 .client-list-item {
   width: 170px;
