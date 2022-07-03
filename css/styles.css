@@ -282,29 +282,19 @@ use {
   margin-left: 30px;
 }
 
-.advantages-flex > .item::before {
-  content: '';
+.item svg {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.about-icon-block {
   display: block;
   height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 4px;
   background-color: var(--body-accent-background);
-}
-
-.advantages-flex > .item:nth-child(1)::before {
-  background-image: url(../images/logo/about-antenna-1.svg);
-}
-
-.advantages-flex > .item:nth-child(2)::before {
-  background-image: url(../images/logo/about-clock2.svg);
-}
-
-.advantages-flex > .item:nth-child(3)::before {
-  background-image: url(../images/logo/about-diagram-3.svg);
-}
-.advantages-flex > .item:nth-child(4)::before {
-  background-image: url(../images/logo/about-astronau-4.svg);
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .advantages-list-header {
