@@ -127,34 +127,31 @@ use {
 
 .header-kontakt {
   display: flex;
+  color: var(--header-contact-color);
+  align-items: center;
 }
 .header-kontakt > .item {
   display: flex;
-
-  align-items: center;
 }
 
-.header-kontakt > .item:nth-child(1)::before {
-  content: '';
+.header-kontakt > .item:nth-child(1) svg {
   width: 16px;
   height: 12px;
-  background-image: url(../images/logo/envelope.svg);
-  margin-right: 10px;
+  fill: currentColor;
 }
 
-.header-kontakt > .item:nth-child(2)::before {
-  content: '';
+.header-kontakt > .item:nth-child(2) {
+  margin-left: 10px;
+}
+
+.header-kontakt > .item:nth-child(3) {
+  margin-left: 50px;
   width: 10px;
   height: 16px;
-  background-image: url(../images/logo/smartphone.svg);
-  margin-right: 10px;
+  fill: currentColor;
 }
-
-.header-kontakt .item + .item {
-  margin-left: 50px;
-}
-
-.nav {
+.header-kontakt > .item:nth-child(4) {
+  margin-left: 10px;
 }
 
 .logo-accent {
@@ -272,11 +269,11 @@ use {
   width: 270px;
 }
 
-.advantages-flex .item + .item {
+.advantages-flex .adv-item + .adv-item {
   margin-left: 30px;
 }
 
-.item svg {
+.adv-item svg {
   width: 70px;
   height: 70px;
 }
@@ -309,9 +306,6 @@ use {
 .about-box {
   display: flex;
   justify-content: space-between;
-}
-
-.about-title-margin {
 }
 
 .section-title {
@@ -574,13 +568,18 @@ use {
 }
 
 .project-item {
-  display: block;
+  /* display: block; */
   margin-right: 30px;
   margin-bottom: 30px;
   text-align: left;
 }
 
-.project-item:hover {
+.project-item-link {
+  display: block;
+}
+
+.project-item-link:hover,
+.project-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
