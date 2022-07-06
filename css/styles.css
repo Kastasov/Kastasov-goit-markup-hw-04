@@ -130,28 +130,22 @@ use {
   color: var(--header-contact-color);
   align-items: center;
 }
-.header-kontakt > .item {
-  display: flex;
-}
-
-.header-kontakt > .item:nth-child(1) svg {
-  width: 16px;
-  height: 12px;
-  fill: currentColor;
-}
 
 .header-kontakt > .item:nth-child(2) {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
-.header-kontakt > .item:nth-child(3) {
-  margin-left: 50px;
+.header-contact-smart-logo {
   width: 10px;
   height: 16px;
+  margin-right: 10px;
   fill: currentColor;
 }
-.header-kontakt > .item:nth-child(4) {
-  margin-left: 10px;
+.header-contact-mail-logo {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .logo-accent {
@@ -186,7 +180,8 @@ use {
 }
 
 .header-contact-link {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--header-contact-color);
   text-decoration: none;
   padding-top: 32px;
@@ -458,6 +453,7 @@ use {
 .footer-social-links-block a {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -470,8 +466,6 @@ use {
 }
 
 .footer-social-links-block svg {
-  margin-left: auto;
-  margin-right: auto;
   width: 20px;
   height: 20px;
   fill: currentcolor;
